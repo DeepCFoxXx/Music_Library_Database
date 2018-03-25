@@ -12,6 +12,6 @@ CREATE TABLE albums (
   artist_id int4 REFERENCES artists(id)
 );
 
---  createdb bounty_hunter
---  psql -d bounty_hunter -f db/bounty_hunter.sql
+--  createdb music_library
+--  psql -d music_library -f db/music_library.sql
 --  ruby db/console.rb
