@@ -23,4 +23,13 @@ class Artist
     @id = SqlRunner.run( sql, values )[0]["id"].to_i()
   end
 
-end   
+  def albums()
+    sql = "SELECT * FROM albums
+    WHERE artist_id = $1"
+    values = [@id]
+    albums = SqlRunner.run( sql, values )
+    result = albums.map { |album_hash| Album.new( album_hash ) }
+    return result
+  end
+
+end
