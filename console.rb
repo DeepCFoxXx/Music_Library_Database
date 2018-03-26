@@ -1,5 +1,5 @@
-require_relative( './models/album' )
-require_relative( './models/artist' )
+require_relative( './models/album.rb' )
+require_relative( './models/artist.rb' )
 require( 'pry-byebug' )
 
 
